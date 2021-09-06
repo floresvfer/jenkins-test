@@ -8,6 +8,7 @@ module.exports = function (config) {
     plugins: [
       require('karma-jasmine'),
       require('karma-chrome-launcher'),
+       require( 'karma-phantomjs-launcher' ),
       require('karma-jasmine-html-reporter'),
       require('karma-coverage'),
       require('@angular-devkit/build-angular/plugins/karma')
@@ -21,6 +22,7 @@ module.exports = function (config) {
       },
       clearContext: false // leave Jasmine Spec Runner output visible in browser
     },
+    browsers: [ 'PhantomJS', 'Chrome' ],
     jasmineHtmlReporter: {
       suppressAll: true // removes the duplicated traces
     },
