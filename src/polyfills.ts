@@ -59,7 +59,6 @@
  */
 import 'zone.js';  // Included with Angular CLI.
 
-import 'intl';
 /***************************************************************************************************
  * APPLICATION IMPORTS
  */
