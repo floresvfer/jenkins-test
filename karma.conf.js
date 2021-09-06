@@ -13,6 +13,17 @@ module.exports = function (config) {
       require('karma-coverage'),
       require('@angular-devkit/build-angular/plugins/karma')
     ],
+    customLaunchers: {
+        ChromeHeadless: {
+            base: 'Chrome',
+            flags: [
+                '--headless',
+                '--disable-gpu',
+                '--no-sandbox',
+                '--remote-debugging-port=9222',
+            ]
+        }
+    },
     client: {
       jasmine: {
         // you can add configuration options for Jasmine here
@@ -22,7 +33,7 @@ module.exports = function (config) {
       },
       clearContext: false // leave Jasmine Spec Runner output visible in browser
     },
-    browsers: [ 'PhantomJS', 'Chrome' ],
+    browsers: [ 'PhantomJS', 'Chrome',  'ChromeHeadless'],
     jasmineHtmlReporter: {
       suppressAll: true // removes the duplicated traces
     },
