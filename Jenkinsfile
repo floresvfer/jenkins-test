@@ -1,6 +1,6 @@
 pipeline {
   agent {
-    docker { image 'node:14-alpine' }
+    docker { image 'rastasheep/alpine-node-chromium:14-alpine' }
   } 
   environment {
         HOME = '.'
