@@ -13,7 +13,7 @@ pipeline {
     stage('Test') {
       parallel {
         stage('Unit tests') {
-            steps { sh 'ng test --watch=false --browsers=ChromeHeadless' }
+            steps { sh 'npm run-script test --watch=false --browsers=ChromeHeadless' }
         }
       }
     }
